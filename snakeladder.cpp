@@ -38,19 +38,16 @@ int main(){
     if(position == 0)
         break;
     boardsize =10;
-//    int snakeCount,ladderCount;
-//    snakeCount = round(boardsize*boardsize*0.10);
-//    ladderCount = round(boardsize*boardsize*0.05);
     map<int,int> snake,ladder;
 
-    //ladder starting point and ending point
+    //ladder
     ladder[1]  = 23;
     ladder[8]  = 14;
     ladder[27] = 63;
     ladder[67] = 73;
     ladder[80] = 98;
 
-    //smake starting point and ending point
+    //snake
     snake[99] = 54;
     snake[94] = 42;
     snake[91] = 71;
@@ -64,9 +61,6 @@ int main(){
 
     ladder[position]!=0?position=ladder[position]:position;
     snake[position]!=0?position=snake[position]:position;
-
-
-
     printRowCol(boardsize,position);
     }
     return 0;
